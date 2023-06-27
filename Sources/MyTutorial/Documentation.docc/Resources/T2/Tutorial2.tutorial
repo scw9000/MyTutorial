@@ -1,0 +1,78 @@
+@Tutorial(time: 20) {
+    @Intro(title: "App Privacy") {
+        During launch, backgrounding and app resume, iOS will take a screenshot of your app for display whilst the app is fully loaded or backgrounded.
+                                                                        
+        While this is assists in a seemingly uninterrupted app operation, the screenshots are not stored in a secure location.
+                                                                    
+        In order to prevent this, you can hide your apps main window when you app becomes inactive and unhide it when your app resumes.
+                                                                        
+        @Image(source: background.jpg, alt: "Background image of people gathered around a computer.")
+    }
+    
+    @Section(title: "Privacy during app state changes") {
+        @ContentAndMedia {
+            For this exercise, click on the Project files link to download and use the attached project file (Awake16) as your starting point for this exercise.
+                                                                                
+            A physical iOS device is not necessary for this exercise.
+                                                                                    
+            You'll start by updating your AwakeApp main declaration to relay app state-change to other views in your app.
+        }
+        
+        @Steps {
+            @Step {
+                On your Mac, open the Xcode project for "Awake1" - found in your Downloads folder.
+                @Image(source: tut4_image001.jpg, alt: "<#accessible description#>")
+            }
+            
+            @Step {
+                Click Trust and Open when prompted.
+                @Image(source: tut4_image002.jpg, alt: "<#accessible description#>")
+            }
+            @Step {
+                Use the project navigator to open **AwakeApp.swift**.
+                @Code(name: "AwakeApp.swift", file: privacy_01.swift)
+            }
+            @Step {
+                Update the file using the snippet of code below (the changes are highlighted):
+                @Code(name: "AwakeApp.swift", file: privacy_02.swift)
+            }
+            @Step {
+                Next, open **ContentView.swift**
+                @Code(name: "ContentView.swift", file: privacy_03.swift)
+            }
+            @Step {
+                Add the new environmentObject to the top.
+                @Code(name: "ContentView.swift", file: privacy_04.swift)
+            }
+            
+            @Step {
+                Update part of **ContentView.swift** to make use of the newly added environmentObject (**blindsup**).
+                @Code(name: "ContentView.swift", file: privacy_05.swift)
+            }
+            
+            @Step {
+                Add the following additional **Blinds** view declaration to the end of **ContentView.swift**:
+                @Code(name: "ContentView.swift", file: privacy_06.swift)
+            }
+            @Step {
+                Select an iPhone 14 as the destination Simulator for this project.
+                @Image(source: tut4_image003.jpg, alt: "<#accessible description#>")
+            }
+            @Step {
+                Compile and run this project in Simulator.
+                @Image(source: tut4_image004.jpg, alt: "<#accessible description#>")
+            }
+            @Step {
+                Test this app by opening it and then slowly swiping up from the bottom of the device screen to access multi-tasking.
+                @Image(source: tut4_image005.jpg, alt: "<#accessible description#>")
+            }
+            @Step {
+                Examine the difference between this app's item in the multi-tasking screen and other apps you have had running:
+                @Image(source: tut4_image006.jpg, alt: "<#accessible description#>")
+            }
+            @Step {
+                When done, stop tasks for this project.
+                }
+        }
+    }
+}

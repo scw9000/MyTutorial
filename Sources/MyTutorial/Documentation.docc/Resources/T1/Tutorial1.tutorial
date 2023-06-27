@@ -1,0 +1,33 @@
+@Tutorial(time: 2, projectFiles: "student_materials.zip") {
+    @Intro(title: "Introduction") {
+        You're invited to learn about secure app development in SwiftUI using Xcode. These tutorials will cover:
+        
+        * Increase app privacy
+        
+        The projects and sample code that accompany this workshop are not to be used in your own work.
+        
+        You use them at your own risk.
+        
+        @Image(source: background.jpg, alt: "Background image of people gathered around a computer.")
+    }
+    
+    @Section(title: "Get the student materials") {
+        @ContentAndMedia {
+            Use the 'Project files' link above to download the student materials used by the projects throughout these workshop tutorials.
+            
+            ## Download Xcode 14
+            If you haven't already done so, [download Xcode 14](https://apps.apple.com/au/app/xcode/id497799835?mt=12) from the App store.
+            
+            Once you have downloaded Xcode, you're ready to begin.
+            }
+        
+        @Steps {
+            @Step {
+                Click the Project files link to download the student materials used in this workshop.
+                
+                On a Mac, these will download (and uncompress) in your Downloads folder.
+                @Image(source: project_files.png, alt: "An icon depicting the download files link.")
+            }
+        }
+    }
+}
